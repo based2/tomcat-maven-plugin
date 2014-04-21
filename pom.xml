@@ -230,8 +230,6 @@
       </otherArchives>
     </mailingList>
 
-
-
     <!-- old mailing lists from codehaus -->
     <mailingList>
       <name>Legacy Development List</name>
@@ -647,11 +645,11 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-antrun-plugin</artifactId>
-          <version>1.6</version>
+          <version>1.7</version>
         </plugin>
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>2.5.1</version>
+        <version>3.1</version>
           <configuration>
             <encoding>${project.build.sourceEncoding}</encoding>
             <source>${maven.compiler.source}</source>
@@ -661,7 +659,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-dependency-plugin</artifactId>
-          <version>2.5.1</version>
+          <version>2.8</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -707,12 +705,12 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
-          <version>2.5</version>
+          <version>2.8.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-release-plugin</artifactId>
-          <version>2.3.2</version>
+          <version>2.5</version>
           <configuration>
             <preparationGoals>clean install</preparationGoals>
           </configuration>
@@ -759,7 +757,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-scm-publish-plugin</artifactId>
-          <version>1.0-beta-2</version>
+          <version>1.0</version>
           <configuration>
             <pubScmUrl>scm:svn:https://svn.apache.org/repos/asf/tomcat/site/trunk/docs/${sitePath}</pubScmUrl>
             <checkinComment>Apache Tomcat Maven Plugin site documentation for ${project.version}</checkinComment>
@@ -886,7 +884,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-changes-plugin</artifactId>
-        <version>2.8</version>
+        <version>2.10</version>
         <inherited>false</inherited>
         <configuration>
           <columnNames>Type,Fix Version,Key,Summary,Assignee,Status,Created</columnNames>
@@ -941,7 +939,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-jxr-plugin</artifactId>
-            <version>2.2</version>
+            <version>2.3</version>
           </plugin>
           <plugin>
             <groupId>org.codehaus.sonar-plugins</groupId>

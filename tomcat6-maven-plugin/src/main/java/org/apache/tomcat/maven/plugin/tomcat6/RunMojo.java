@@ -23,15 +23,10 @@ import org.apache.catalina.Context;
 import org.apache.catalina.loader.WebappLoader;
 import org.apache.catalina.startup.Embedded;
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.maven.artifact.Artifact;
 import org.apache.maven.plugin.MojoExecutionException;
-import org.apache.maven.plugins.annotations.Component;
-import org.apache.maven.plugins.annotations.Execute;
-import org.apache.maven.plugins.annotations.LifecyclePhase;
-import org.apache.maven.plugins.annotations.Mojo;
-import org.apache.maven.plugins.annotations.Parameter;
-import org.apache.maven.plugins.annotations.ResolutionScope;
+import org.apache.maven.plugins.annotations.*;
 import org.apache.tomcat.maven.common.run.ClassLoaderEntriesCalculator;
 import org.apache.tomcat.maven.common.run.ClassLoaderEntriesCalculatorRequest;
 import org.apache.tomcat.maven.common.run.ClassLoaderEntriesCalculatorResult;
@@ -42,11 +37,7 @@ import org.codehaus.plexus.util.xml.Xpp3DomBuilder;
 import org.codehaus.plexus.util.xml.Xpp3DomWriter;
 import org.codehaus.plexus.util.xml.pull.XmlPullParserException;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.StringWriter;
+import java.io.*;
 import java.util.List;
 import java.util.Set;
 
@@ -194,7 +185,7 @@ public class RunMojo
             {
                 for ( String additionalClasspathDir : additionalClasspathDirs )
                 {
-                    if ( StringUtils.isNotBlank( additionalClasspathDir ) )
+                    if ( StringUtils.isNotBlank(additionalClasspathDir) )
                     {
                         File file = new File( additionalClasspathDir );
                         if ( file.exists() )
